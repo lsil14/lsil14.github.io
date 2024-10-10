@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page de Notícias</title>
+    <title>Tech - Last News</title>
     <style>
         body {
             font-family: Avenir, Arial;
@@ -11,9 +11,14 @@
             padding: 0;
             background-color: #f4f4f4;
         }
-        
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
         .container {
-            width: 100%;
+            width: 80%;
             margin: auto;
             overflow: hidden;
         }
@@ -21,57 +26,97 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            margin: 2px 0;
+            margin: 20px 0;
         }
         .news-article {
             background: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 5px;
-            padding: 2px;
-            width: 100%;
+            margin: 10px;
+            padding: 20px;
+            width: 30%;
             box-sizing: border-box;
-flex-wrap: wrap;
         }
-        .news-article1 {
+            .news-articleI {
             background: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: 5px;
-            padding: 2px;
-            width: 48%;
+            margin: 10px;
+            padding: 20px;
+            width: 100%;
             box-sizing: border-box;
-flex-wrap: wrap;
+        }
+        .news-articleI {
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            width: 50%;
+            box-sizing: border-box;
         }
         .news-article img {
-            max-width: 100%;
+            max-width: 100%;/* Ajuste o valor conforme necessário */
             height: auto;
         }
         .news-article h2 {
-            margin: 5px 0;
+            margin: 10px 0;
         }
         .news-article p {
             color: #555;
         }
-
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
+    <header>
+        <div class="container">
+            <h1>Last News</h1>
+        </div>
+    </header>
     <div class="container">
         <section class="news-section">
             <article class="news-article">
-                <div id="mobile_vendor-BR-monthly-202309-202409" width="1200" height="390" style="width:600px; height: 390px;"></div><!-- You may change the values of width and height above to resize the chart --><p>Source: <a href="https://gs.statcounter.com/vendor-market-share/mobile/brazil">StatCounter Global Stats - Device Vendor Market Share</a></p><script type="text/javascript" src="https://www.statcounter.com/js/fusioncharts.js"></script><script type="text/javascript" src="https://gs.statcounter.com/chart.php?mobile_vendor-BR-monthly-202309-202409&chartWidth=1200"></script>
-                </div> 
-        </section>
-        <div class="container"> 
-        <section class="news-section">
-            <article class="news-article1">
-                <div id="desktop+mobile+tablet-comparison-BR-monthly-202309-202409" width="600" height="390" style="width:600px; height: 390px;"></div><!-- You may change the values of width and height above to resize the chart --><p>Source: <a href="https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet/brazil">StatCounter Global Stats - Platform Comparison Market Share</a></p><script type="text/javascript" src="https://www.statcounter.com/js/fusioncharts.js"></script><script type="text/javascript" src="https://gs.statcounter.com/chart.php?desktop+mobile+tablet-comparison-BR-monthly-202309-202409&chartWidth=600"></script>
+                <li><a href="https://www.cnnbrasil.com.br/economia/financas/queda-do-poder-de-compra-e-a-maior-preocupacao-dos-brasileiros-diz-pesquisa/">Drop in purchasing power is the biggest concern for Brazilians, says survey | CNN Brazil</a></li>
+                <li><a href="https://www.cnnbrasil.com.br/economia/macroeconomia/brasileiro-gasta-r-14-mil-por-mes-com-cartao-de-credito-mostra-estudo-da-serasa-experian/">Brazilians spend R$1,400 per month on credit cards, says Serasa Experian | CNN Brazil</a></li>
+                <li><a href="https://valor.globo.com/google/amp/publicacoes/especiais/5g/noticia/2024/09/27/cobertura-5g-nos-municipios-vai-alem-do-que-foi-definido-em-leilao.ghtml">5G coverage in municipalities goes beyond what was defined in the auction | 5G | Economic Value</a></li>
+                <li><a href="https://www.cnnbrasil.com.br/economia/macroeconomia/google-barra-propaganda-de-bets-sem-registro-no-brasil-a-partir-desta-segunda-feira-30/">Google bars advertising of unregistered “bets” in Brazil from 09/30/2024</a></li>
+                <li><a href="https://tecnoblog.net/noticias/amazon-perde-na-justica-o-direito-de-vender-celulares-piratas/">Amazon loses the right to sell unapproved smartphones in court • Cell phone • Tecnoblog</a></li>
+                <li><a href="https://www.showmetech.com.br/samsung-lanca-galaxy-s24-fe-e-galaxy-tab-s10-ultra-no-brasil/">Samsung launches Galaxy S24 FE and two Galaxy Tab S10 in Brazil starting at R$5,499</a></li>
+                <li><a href="https://www.cnnbrasil.com.br/economia/financas/dia-das-criancas-8-em-cada-10-brasileiros-pretendem-gastar-ate-r-250-com-presentes/">Children's Day: 8 out of 10 Brazilians intend to spend up to R$250 on gifts | CNN Brazil</a></li>
             </article>
-            <article class="news-article1">
-            <div id="mobile+tablet-android_version-BR-monthly-202309-202409" width="600" height="390" style="width:600px; height: 390px;"></div><!-- You may change the values of width and height above to resize the chart --><p>Source: <a href="https://gs.statcounter.com/android-version-market-share/mobile-tablet/brazil">StatCounter Global Stats - Android Version Market Share</a></p><script type="text/javascript" src="https://www.statcounter.com/js/fusioncharts.js"></script><script type="text/javascript" src="https://gs.statcounter.com/chart.php?mobile+tablet-android_version-BR-monthly-202309-202409&chartWidth=600"></script>
+            <article class="news-article">
+                <li><a href="https://www.cnnbrasil.com.br/economia/negocios/shopee-inaugura-novo-modelo-de-centro-de-distribuicao-no-brasil/">Shopee opens new distribution center model in Brazil | CNN Brazil</a></li>
+                <li><a href="https://www.tudocelular.com/android/noticias/n226731/shopee-centro-distribuicao-fulfillment-brasil.html">Shopee opens first fulfillment distribution center in Brazil - TudoCelular.com</a></li>
+                <li><a href="https://www.mobiletime.com.br/noticias/01/10/2024/abinee-liminar-amazon/">Abinee: Amazon's injunction is important for Anatel</a></li>
+                <li><a href="https://valor.globo.com/google/amp/empresas/noticia/2024/10/01/ranking-de-velocidade-5g-avalia-operadoras-veja-primeiros-resultados.ghtml">5G speed ranking evaluates operators see first results | Companies | Economic Value</a></li>
+                <li><a href="https://www.tudocelular.com/motorola/noticias/n226756/motorola-moto-g55-lancamento-brasil-preco.html">Motorola launches Moto G55 in Brazil with 120 Hz screen and fast charging - TudoCelular.com</a></li>
             </article>
-            
+            <article class="news-article">
+                <li><a href="https://neofeed.com.br/economia/um-novo-caos-logistico-no-brasil-se-aproxima-e-ja-trava-importacoes-e-exportacoes/">A new logistical chaos in Brazil is approaching and is already “blocking” imports and exports - NeoFeed</a></li>
+                <li><a href="https://www.mobiletime.com.br/noticias/02/10/2024/black-friday-faturamento/">Black Friday 2024: revenue could reach R$9.3 billion</a></li>
+                <li><a href="https://www.tudocelular.com/samsung/noticias/n226769/samsung-dois-anos-5g-brasil-celular-tc-entrevista.html">Samsung celebrates two years of 5G in Brazil with advances in its cell phone portfolio | TC Interview - TudoCelular.com</a></li>
+                <li><a href="https://tudoemtecnologia.com/xiaomi-14t-chega-oficialmente-no-brasil-saiba-o-preco/">Xiaomi 14T officially arrives in Brazil, find out the price – Everything in Technology</a></li>
+                <li><a href="https://www.tudocelular.com/vivo/noticias/n226800/premio-opensignal-5g-2024.html">Vivo has the highest 5G speed in the world, reveals OpenSignal - TudoCelular.com</a></li>
+            </article>
+            <article class="news-articleI">
+                <div style="min-height:371px" id="datawrapper-vis-DNu2N"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/DNu2N/embed.js" charset="utf-8" data-target="#datawrapper-vis-DNu2N"></script><noscript><img src="https://datawrapper.dwcdn.net/DNu2N/full.png" alt="" /></noscript></div>
+            </article> 
+            <article class="news-articleI">
+                <div style="min-height:668px" id="datawrapper-vis-i6Wre"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/i6Wre/embed.js" charset="utf-8" data-target="#datawrapper-vis-i6Wre"></script><noscript><img src="https://datawrapper.dwcdn.net/i6Wre/full.png" alt="" /></noscript></div>
+            </article>    
+            <article class="news-articleI">
+                <div style="min-height:1075px" id="datawrapper-vis-BY3HO"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/BY3HO/embed.js" charset="utf-8" data-target="#datawrapper-vis-BY3HO"></script><noscript><img src="https://datawrapper.dwcdn.net/BY3HO/full.png" alt="" /></noscript></div>
+            </article>    
         </section>
     </div>
-    </div>
+    <footer>
+        <p>&copy; 2024 Last News</p>
+    </footer>
 </body>
 </html>
