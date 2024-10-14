@@ -76,45 +76,63 @@
 <body>
     <header>
         <div class="container">
-            <h1>Last News</h1>
+            <h1>Calculadora de Valor Diário Sugerido</h1>
         </div>
     </header>
     <div class="container">
         <section class="news-section">
-            <article class="news-article">
-                <li><a href="https://www.tudocelular.com/mercado/noticias/n227066/realme-c61-lancamento-confirmado-no-brasil-outubro.html">Realme C61 has confirmed launch in Brazil for this month - TudoCelular.com</a></li>
-                <li><a href="https://www.tudocelular.com/mercado/noticias/n225599/samsung-galaxya164g-teste-oneui-especficacoes-.html">Samsung Galaxy A16 4G: certification at Anatel allows sale of the device in Brazil - TudoCelular.com</a></li>
-                <li><a href="https://neofeed.com.br/negocios/multi-a-empresa-que-vende-de-tudo-enxuga-portfolio-e-volta-a-focar-em-tecnologia/">Multi, the company that sells everything, reduces its portfolio and refocuses on technology - NeoFeed</a></li>
-                <li><a href="https://www.mobiletime.com.br/noticias/08/10/2024/2g-3g-desligamento/">Anatel will suspend certification of 2G and 3G devices</a></li>
-                <li><a href="https://www.mobiletime.com.br/noticias/09/10/2024/brasil-pode-voltar-ao-me/">Brazil could return to the global semiconductor market</a></li>  
-            </article>
-            <article class="news-article">
-                <li><a href="https://www.mobiletime.com.br/noticias/09/10/2024/5g-no-brasil-monetizacao/">5G in Brazil: telcos face challenges in monetization</a></li>
-                <li><a href="https://www.tudocelular.com/mercado/noticias/n227030/mirando-6g-anatel-divisao-faixa-6-ghz-celular-wifi.html">Aiming at 6G, Anatel should evaluate division of the 6 GHz band between cell phones and Wi-Fi - TudoCelular.com</a></li>
-                <li><a href="https://www.mobiletime.com.br/terra-externa/09/10/2024/5g-huawei/">5G: trend is charging for experience, projects Huawei</a></li>
-                <li><a href="https://www.cnnbrasil.com.br/economia/macroeconomia/dia-das-criancas-fecomerciosp-projeta-acrescimo-de-r-148-bi-no-faturamento-do-comercio/">Commerce should increase by R$ 1.5 billion on Children's Day, says entity | CNN Brazil</a></li>
-                <li><a href="https://www.cnnbrasil.com.br/economia/macroeconomia/varejo-registra-maior-queda-do-ano-em-setembro-aponta-stone/">Retail records biggest drop of the year in September, points out Stone | CNN Brazil</a></li>
-            </article>
-            <article class="news-article">
-                <li><a href="https://www.cnnbrasil.com.br/economia/macroeconomia/vendas-no-varejo-do-brasil-recuam-03-em-agosto-diz-ibge/">Retail sales in Brazil fell 0.3% in August, says IBGE | CNN Brazil</a></li>
-                <li><a href="https://www.ecommercebrasil.com.br/noticias/m-commerce-compras-via-smartphones-aumentam-17-no-primeiro-semestre-de-2024">M-commerce: purchases via smartphones increase 17% in the first half of 2024 - E-Commerce Brasil</a></li>
-                <li><a href="https://www.eletrolar.com/es-2024-coverage-lectures/">ES 2024 Coverage / Lectures - Portal Eletrolar.com</a></li>
-                <li><a href="https://www.tudocelular.com/acer/noticias/n227024/mercado-desktops-notebooks-recua-vendas-pc-ia.html">Desktop and notebook market declines, but should recover sales thanks to AI - TudoCelular.com</a></li>
-                <li><a href="https://www.tudocelular.com/mercado/noticias/n227018/mercado-tablets-cresce-apple-samsung-huawei.html">Tablet market grows in the 2nd quarter with launches from Apple, Samsung and Huawei - TudoCelular.com</a></li>
-            </article>
-            <article class="news-articleI">
-                <div style="min-height:371px" id="datawrapper-vis-DNu2N"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/DNu2N/embed.js" charset="utf-8" data-target="#datawrapper-vis-DNu2N"></script><noscript><img src="https://datawrapper.dwcdn.net/DNu2N/full.png" alt="" /></noscript></div>
-            </article> 
-            <article class="news-articleI">
-                <div style="min-height:668px" id="datawrapper-vis-i6Wre"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/i6Wre/embed.js" charset="utf-8" data-target="#datawrapper-vis-i6Wre"></script><noscript><img src="https://datawrapper.dwcdn.net/i6Wre/full.png" alt="" /></noscript></div>
-            </article>    
-            <article class="news-articleI">
-                <div style="min-height:1075px" id="datawrapper-vis-BY3HO"><script type="text/javascript" defer src="https://datawrapper.dwcdn.net/BY3HO/embed.js" charset="utf-8" data-target="#datawrapper-vis-BY3HO"></script><noscript><img src="https://datawrapper.dwcdn.net/BY3HO/full.png" alt="" /></noscript></div>
-            </article>    
+           
+
+<label for="valorDisponivel">Valor Disponível:</label>
+<input type="number" id="valorDisponivel">
+
+<label for="dataAtual">Data Atual:</label>
+<input type="date" id="dataAtual">
+
+<label for="dataRecarga">Data da Recarga:</label>
+<input type="date" id="dataRecarga">
+
+<label for="diasHomeOffice">Dias de Home Office:</label>
+<input type="number" id="diasHomeOffice">
+
+<button onclick="calcularValorDiario()">Calcular</button>
+
+<p id="resultado"></p>
+
+<script>
+const feriados = ['2024-01-01', '2024-04-15', '2022-05-01', '2024-09-07', '2024-12-25', '2024-11-02', '2024-11-20'];
+
+function calcularDiasUteis(dataInicial, dataFinal) {
+    let diasUteis = 0;
+    let currentDate = new Date(dataInicial);
+
+    while (currentDate <= dataFinal) {
+        if (currentDate.getDay() !== 0 && currentDate.getDay() !== 6 && !feriados.includes(currentDate.toISOString().split('T')[0])) {
+            diasUteis++;
+        }
+        currentDate.setDate(currentDate.getDate() + 1);
+    }
+
+    return diasUteis;
+}
+
+function calcularValorDiario() {
+    const valorDisponivel = parseFloat(document.getElementById('valorDisponivel').value);
+    const dataAtual = new Date(document.getElementById('dataAtual').value);
+    const dataRecarga = new Date(document.getElementById('dataRecarga').value);
+    const diasHomeOffice = parseInt(document.getElementById('diasHomeOffice').value);
+
+    const diffDays = calcularDiasUteis(dataAtual, dataRecarga);
+
+    const valorDiario = valorDisponivel / (diffDays - diasHomeOffice);
+
+    document.getElementById('resultado').textContent = `Valor Diário Sugerido: R$ ${valorDiario.toFixed(2)}.Dias Trabalhados no escritório:${(diffDays - diasHomeOffice)}`;
+}
+</script>  
         </section>
     </div>
     <footer>
-        <p>&copy; 2024 Last News</p>
+        <p>&copy; 2024 Calcs </p>
     </footer>
 </body>
 </html>
